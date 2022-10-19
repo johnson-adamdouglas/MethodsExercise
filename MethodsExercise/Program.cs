@@ -25,20 +25,46 @@ namespace MethodsExercise
         {
             return num1 / num2;
         }
-        //public static int Sum(params int[] nums)
-        //{
-        //    for (int i = 0; 0 < nums.Length; i++);
+        public static int Sum(params int[] nums)
+        {
+            var sum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+            }
+            return sum;
+        }
+        public static int Minus(params int[] nums) 
+        {
+            var diff = 100;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                diff -= nums[i];
+            }
+            return diff;
+        }
 
-        //    return nums[i];
-        //}
-                
+        public static int Mult(params int[] nums)
+        {
+            var prod = 1;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                prod *= nums[i];
+            }
+            return prod;
+        }
+
 
 
         static void Main(string[] args)
         {
             //-------------------------------------------Params Keyword------------------------------------------
 
-            //Console.WriteLine(Sum(1, 5, 7));
+            Console.WriteLine("Type a number greater than 100");
+            var myNumber = Console.ReadLine();
+            Console.WriteLine(Sum(1, 8, 7, 10));
+            Console.WriteLine(Minus(50, 25, 20));
+            Console.WriteLine(Mult(5,5,5));
 
             //---------------------------------------------------------------------------------------------------
             //----------------------------------------Exercise 1---------------------------------------------
