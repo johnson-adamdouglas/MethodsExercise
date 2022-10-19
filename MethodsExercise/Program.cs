@@ -1,9 +1,47 @@
-﻿namespace MethodsExercise
+﻿using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
+
+namespace MethodsExercise
 {
     internal class Program
     {
+        //-------------------------------------------Declared Methods----------------------------------------
+        public static int Add(int num1, int num2) 
+        {
+            return num1 + num2;
+            }
+        public static int Subtract(int num1, int num2)
+        {
+            return num1 - num2;
+        }
+
+        public static int Multiply(int num1, int num2) 
+        { 
+            return num1 * num2;
+        }
+            
+        public static double Divide(int num1, int num2)
+        {
+            return num1 / num2;
+        }
+        //public static int Sum(params int[] nums)
+        //{
+        //    for (int i = 0; 0 < nums.Length; i++);
+
+        //    return nums[i];
+        //}
+                
+
+
         static void Main(string[] args)
         {
+            //-------------------------------------------Params Keyword------------------------------------------
+
+            //Console.WriteLine(Sum(1, 5, 7));
+
+            //---------------------------------------------------------------------------------------------------
+            //----------------------------------------Exercise 1---------------------------------------------
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
 
@@ -39,8 +77,23 @@
                 $"began slowly sinking into the ever-softening ground below. The sound grew louder. The ground " +
                 $"grew softer. {name} sank lower. Lower. Lower. It started getting uncomfortably hot. The " +
                 $"surrounding earth began to crumble away revealing a complex system of red streams of molten" +
-                $"lava. Hysteria washed over {name}. It was becoming clear. {name} wasn't where they thought they " +
+                $" lava. Hysteria washed over {name}. It was becoming clear. {name} wasn't where they thought they " +
                 $"were. {name} was... at a {band} concert.");
+
+            //---------------------------------------Exercise 2------------------------------------------
+            Console.WriteLine();
+            Console.WriteLine("Choose a number between 50 and 100.");
+            int myNum1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Great! Now choose a number between 1 and 49.");
+            int myNum2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"{myNum1} + {myNum2} = {Add(myNum1, myNum2)}");
+            Console.WriteLine($"{myNum1} - {myNum2} = {Subtract(myNum1, myNum2)}");
+            Console.WriteLine($"{myNum1} x {myNum2} = {Multiply(myNum1, myNum2)}");
+            Console.WriteLine($"{myNum1} / {myNum2} = {Divide(myNum1, myNum2)}");
+
+            //---------------------------------------Challenge Mode--------------------------------------
 
 
         }
